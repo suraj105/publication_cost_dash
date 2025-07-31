@@ -1,5 +1,3 @@
-# enrichment.py
-
 import pandas as pd
 from tqdm import tqdm
 

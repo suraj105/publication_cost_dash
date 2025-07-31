@@ -1,4 +1,3 @@
-# utils.py
 import re
 import pandas as pd
 from db.constants import CURRENCY_RATES_TO_EUR
