@@ -1,12 +1,12 @@
 import psycopg2
 from db.db_config import get_engine
 
+# just a script to delete tables from database, as while testing multiple databases were created
 engine = get_engine()
 
 # List of tables to delete
 tables_to_drop = ["doaj", "openapc", "pubmed", "enriched_pubmed_data"]
 
-# Create comma-separated string of table names
 table_names_str = ", ".join([f"{table}" for table in tables_to_drop])
 
 # SQL to drop all tables
@@ -17,7 +17,6 @@ try:
     conn = engine.raw_connection()
     cursor = conn.cursor()
 
-    # Execute drop command
     cursor.execute(drop_sql)
     conn.commit()
 

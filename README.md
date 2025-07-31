@@ -135,6 +135,7 @@ Danach öffnet sich das Dashboard unter
 ├── utils/
 │   ├── xml_to_csv_parser.py    # parst xml to csv
 │   ├── download_pubmed_gz.py   # hunterlädt raw gz pubmed Daten
+│   ├── drop.py                 # nur zum testen, nur tablelle von DB zu lösen 
 │   └── utils.py                # Hilfsfunktionen
 ├── data/                       # Daten (XML, CSV)
 │   ├── pubmed_raw_to_csv/      # Daten, dass von pubmed huntergeladen und geparst sind

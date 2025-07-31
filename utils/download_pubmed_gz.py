@@ -1,14 +1,13 @@
-import os
 import urllib.request
 from pathlib import Path
 from tqdm import tqdm
 
-# Parameters
+# Parameters pubmed
 BASE_URL = "ftp://ftp.ncbi.nlm.nih.gov/pubmed/baseline/"
 START = 1215
 END = 1273
 
-# Resolve path to project root (two levels up from this script)
+# Resolve path to project root
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = PROJECT_ROOT / "data" / "pubmed_raw"
 
@@ -27,6 +26,5 @@ for i in tqdm(file_range, desc="Downloading PubMed XML.gz files", unit="file"):
             urllib.request.urlretrieve(url, out_path)
         except Exception as e:
             print(f"\nFailed to download {filename}: {e}")
-    # Suppress output if already exists (to keep tqdm clean)
 
 print("\n All .xml.gz files downloaded to:", OUTPUT_DIR.resolve())
