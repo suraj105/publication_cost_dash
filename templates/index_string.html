@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {%metas%}
+        <title>{%title%}</title>
+        {%favicon%}
+        {%css%}
+        <style>
+            body { font-family: 'Inter', sans-serif; background: #f7f9fc; }
+            .hero {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                padding: 60px;
+                color: white;
+                text-align: center;
+                border-radius: 0 0 30px 30px;
+            }
+            .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+            .container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+        </style>
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+    </body>
+</html>
